@@ -20,7 +20,7 @@ git reset --hard HEAD@{0}
 cd ../..
 repo sync --force-sync
 # Some needed commits haven't been pushed to lineage repos, yet. Let's repopick them, then
-# Script can be found here http://msm8916.com/~vincent/repopicks.sh
+# Script can be found here https://msm8916.com/~vincent/repopicks.sh
 ./repopicks.sh
 # Temporary remove disable AudioFX build: it crashes ad cause reboots in 8.1. Will be re-enabled later when gets stable
 perl -i -ne 'print unless /^    AudioFX/; ' vendor/lineage/config/common.mk
